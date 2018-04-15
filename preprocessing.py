@@ -23,23 +23,23 @@ def calculate_boundaries(mask, pos, patch_size):
     width, height = mask.shape[0], mask.shape[1]
     
     x_min = pos[0] - patch_size//2
-    x_max = pos[0] + patch_size//2 - 1
+    x_max = pos[0] + patch_size//2
     y_min = pos[1] - patch_size//2
-    y_max = pos[1] + patch_size//2 - 1
+    y_max = pos[1] + patch_size//2
     
     if x_min < 0:
         x_min = 0
-        x_max = x_min + patch_size - 1
+        x_max = x_min + patch_size
     elif x_max >= width:
-        x_max = width - 1
-        x_min = x_max - patch_size + 1
+        x_max = width
+        x_min = x_max - patch_size
 
     if y_min < 0:
         y_min = 0
-        y_max = y_min + patch_size - 1
+        y_max = y_min + patch_size
     elif y_max >= height:
-        y_max = height - 1
-        y_min = y_max - patch_size + 1
+        y_max = height
+        y_min = y_max - patch_size
 
     return x_min, x_max, y_min, y_max
 
@@ -72,30 +72,30 @@ if __name__ == "__main__":
 
     M = np.zeros((10,10))
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (2,2), 4)
-    assert (x_min == 0 and x_max == 3 and y_min == 0 and y_max == 3)
+    assert (x_min == 0 and x_max == 4 and y_min == 0 and y_max == 4)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (5,2), 4)
-    assert (x_min == 3 and x_max == 6 and y_min == 0 and y_max == 3)
+    assert (x_min == 3 and x_max == 7 and y_min == 0 and y_max == 4)
     
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (8,2), 4)
-    assert (x_min == 6 and x_max == 9 and y_min == 0 and y_max == 3)
+    assert (x_min == 6 and x_max == 10 and y_min == 0 and y_max == 4)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (8,5), 4)
-    assert (x_min == 6 and x_max == 9 and y_min == 3 and y_max == 6)
+    assert (x_min == 6 and x_max == 10 and y_min == 3 and y_max == 7)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (2,9), 4)
-    assert (x_min == 0 and x_max == 3 and y_min == 6 and y_max == 9)
+    assert (x_min == 0 and x_max == 4 and y_min == 6 and y_max == 10)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (2,5), 4)
-    assert (x_min == 0 and x_max == 3 and y_min == 3 and y_max == 6)
+    assert (x_min == 0 and x_max == 4 and y_min == 3 and y_max == 7)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (8,8), 4)
-    assert (x_min == 6 and x_max == 9 and y_min == 6 and y_max == 9)
+    assert (x_min == 6 and x_max == 10 and y_min == 6 and y_max == 10)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (5,8), 4)
-    assert (x_min == 3 and x_max == 6 and y_min == 6 and y_max == 9)
+    assert (x_min == 3 and x_max == 7 and y_min == 6 and y_max == 10)
 
     x_min, x_max, y_min, y_max = calculate_boundaries(M, (5,5), 4)
-    assert (x_min == 3 and x_max == 6 and y_min == 3 and y_max == 6)
+    assert (x_min == 3 and x_max == 7 and y_min == 3 and y_max == 7)
 
     print("2/2 tests run successfully")
