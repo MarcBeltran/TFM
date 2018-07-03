@@ -14,7 +14,7 @@ Given the big scope of the proposed project, we reduced it to finding a specific
 
 ## Structure
 
-This project is devided into two main blocks, the part of sementic segmentation using models based on deep learning models and the part based on the application of the RoadTracer model. 
+This project is devided into two main blocks, the part of sementic segmentation consists of the implementation and application of several deep learning models to road detection, while the second part is an application of the RoadTracer model to Barcelona imagery. 
 
 ### Semantic Segmentation
 
