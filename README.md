@@ -31,4 +31,4 @@ In the roadtracer folder there are the python scripts we have tweaked in order t
 - [model_utils.py](roadtracer/model_utils.py) contains the utility functions needed for the model. It is separated for the sake of clarity and modularity.
 - [overlap_images.py](roadtracer/overlap_images.py) is the script we have used to create the final visualizations seen in the thesis report with the road network painted over.
 
-![Results of roadtracer for the city of Barcelona](roadtracer/barcelona_overlapped_model.png | 250x250)
+![Results of roadtracer for the city of Barcelona](roadtracer/barcelona_overlapped_model.png | width=250)
