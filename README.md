@@ -23,3 +23,12 @@ This project is devided into two main blocks, the part of sementic segmentation 
 
 
 ### RoadTracer
+
+In the roadtracer folder there are the python scripts we have tweaked in order to reproduce the results shown in the paper [**RoadTracer: Automatic Extraction of Road Networks from Aerial Images**](https://roadmaps.csail.mit.edu/roadtracer.pdf)  by F. Bastani et al. Instead of Boston, we downloaded and infered the road network for Barcelona and its surroundings. The full implementation of the algorithm and how to use it properly can be found in https://github.com/mitroadmaps/roadtracer. There is also the information on how to obtain the data for your desired region and the Go scripts to obtain it as well.
+
+- [infer.py](roadtracer/infer.py) is the script used to run the iterative graph building algorithm in the region defined
+- [model.py](roadtracer/model.py) contains the CNN decision function implementation
+- [model_utils.py](roadtracer/model_utils.py) contains the utility functions needed for the model. It is separated for the sake of clarity and modularity.
+- [overlap_images.py](roadtracer/overlap_images.py) is the script we have used to create the final visualizations seen in the thesis report with the road network painted over.
+
+
