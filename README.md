@@ -32,3 +32,4 @@ In the roadtracer folder there are the python scripts we have tweaked in order t
 - [overlap_images.py](roadtracer/overlap_images.py) is the script we have used to create the final visualizations seen in the thesis report with the road network painted over.
 
 ![Results of roadtracer for the city of Barcelona](roadtracer/barcelona_overlapped_model.png)
+This are the type of results we have been able to achieve for Barcelona using RoadTracer.
