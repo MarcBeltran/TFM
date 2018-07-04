@@ -18,9 +18,15 @@ This project is devided into two main blocks, the part of sementic segmentation 
 
 ### Semantic Segmentation
 
+The pipeline for the implementation and testing of the segmentation techniques using deep learning models based on convolutional neural networks can be found in the [Segmentation.ipynb](Segmentation.ipynb) notebook. Most of the extraction, cleaning and preprocessing functions can be found in the [preprocessing.py](preprocessing.py) module. The structure of the tested models can be found in the [model.py](model.py) file which uses functions from other auxiliary python modules included too.
 
+The pipeline performs semantic segmentation to extract roads from images to create maps such as the following example:
 
+![Satelite patch](images/3.png)
 
+Maps to:
+
+![Mask patch](images/3_y.png)
 
 ### RoadTracer
 
